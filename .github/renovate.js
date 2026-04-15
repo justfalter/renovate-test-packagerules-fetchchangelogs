@@ -5,7 +5,7 @@ module.exports = {
   platform: 'github',
   forkProcessing: 'false',
   // dryRun: 'full',
-  repositories: ['justfalter/renovate-test-42368'],
+  repositories: ['justfalter/renovate-test-packagerules-fetchchangelogs'],
   packageRules: [
   ],
 };
