@@ -50,7 +50,7 @@
       "fetchChangeLogs": "off"
     },
     {
-      // Problem described by https://github.com/renovatebot/renovate/issues/42368: renovate fetches changelogs for lodash when it should not!
+      // PROBLEM: the grouping of "lodash" with chalk and tar causes its fetchChangeLogs to not be respected
       "matchPackageNames": [
         "lodash",
         "chalk",
