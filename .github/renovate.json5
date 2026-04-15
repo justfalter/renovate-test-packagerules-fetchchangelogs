@@ -17,7 +17,6 @@
   "semanticCommitScope": "deps",
   // "automergeType": "pr",
   "prCreation": "immediate",
-  "fetchChangeLogs": "pr",
   "ignorePresets": [
     ":ignoreModulesAndTests"
   ],
@@ -39,7 +38,43 @@
       "newLogLevel": "info"
     }
   ],
+  "fetchChangeLogs": "off",
   "packageRules": [
+    {
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "prBodyNotes": [
+        "* typescript - inherits fetchChangeLogs from base config"
+      ],
+    },
+    {
+      "matchPackageNames": [
+        "grunt"
+      ],
+      "prBodyNotes": [
+        "* grunt - fetches change logs"
+      ],
+      "fetchChangeLogs": "pr"
+    },
+    {
+      "matchPackageNames": [
+        "chalk"
+      ],
+      "prBodyNotes": [
+        "* chalk - should have changelogs"
+      ],
+      "fetchChangeLogs": "pr"
+    },
+    {
+      "matchPackageNames": [
+        "tar"
+      ],
+      "prBodyNotes": [
+        "* tar - should have changelogs"
+      ],
+      "fetchChangeLogs": "pr"
+    },
     {
       "matchPackageNames": [
         "lodash"
