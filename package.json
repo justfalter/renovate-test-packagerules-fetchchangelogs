@@ -1,0 +1,29 @@
+{
+  "name": "renovate-test-42368",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@types/grunt": "^0.4.32",
+    "@types/lodash": "4.17.19",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "chalk": "5.4.1",
+    "grunt": "1.5.3",
+    "lodash": "4.17.19",
+    "p-throttle": "8.0.0",
+    "tar": "7.5.8"
+  }
+}

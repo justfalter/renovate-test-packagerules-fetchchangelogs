@@ -1,0 +1,62 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "assignees": [
+    "justfalter"
+  ],
+  "reviewers": [
+    "justfalter"
+  ],
+  "gitIgnoredAuthors": [
+    'renovate-justfalter[bot]'
+  ],
+  "printConfig": true,
+  "recreateWhen": "always",
+  "semanticCommitScope": "deps",
+  // "automergeType": "pr",
+  "prCreation": "immediate",
+  "fetchChangeLogs": "pr",
+  "ignorePresets": [
+    ":ignoreModulesAndTests"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/__fixtures__/**",
+    "test/**"
+  ],
+  "rebaseWhen": "conflicted",
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "commitHourlyLimit": 100,
+  "prHourlyLimit": 100,
+  "prConcurrentLimit": 100,
+  "logLevelRemap": [
+    {
+      "matchMessage": "/Fetching changelog/",
+      "newLogLevel": "info"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "lodash"
+      ],
+      "prBodyNotes": [
+        "* lodash - should have no changelogs"
+      ],
+      "fetchChangeLogs": "off"
+    },
+    {
+      // Problem described by https://github.com/renovatebot/renovate/issues/42368: renovate fetches changelogs for lodash when it should not!
+      "matchPackageNames": [
+        "lodash",
+        "chalk",
+        "tar"
+      ],
+      "groupName": "group of unrelated packages"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+name: Renovate
+on:
+  # This lets you dispatch a renovate job with different cache options if you want to reset or disable the cache manually.
+  workflow_dispatch:
+    inputs:
+      renovate_image:
+        description: "renovate image"
+        type: string
+        default: "ghcr.io/renovatebot/renovate"
+      renovate_version:
+        description: "renovate version"
+        type: string
+        default: "43"
+
+      log_level:
+        description: "log level"
+        type: string
+        default: debug
+
+jobs:
+  renovate:
+    name: Renovate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get token
+        id: get_token
+        uses: actions/create-github-app-token@v1
+        with:
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          app-id: ${{ secrets.RENOVATE_APP_ID }}
+          owner: ${{ github.repository_owner }}
+          repositories: "renovate-test-42368"
+
+      - uses: actions/checkout@v6
+
+      - uses: renovatebot/github-action@v46.1.8
+        with:
+          configurationFile: .github/renovate.js
+          token: "${{ steps.get_token.outputs.token }}"
+          renovate-version: "${{ inputs.renovate_version }}"
+          renovate-image: "${{ inputs.renovate_image }}"
+        env:
+          LOG_LEVEL: ${{ inputs.log_level }}
+          RENOVATE_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
