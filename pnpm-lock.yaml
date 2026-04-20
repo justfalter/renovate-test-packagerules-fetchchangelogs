@@ -18,8 +18,8 @@ importers:
         specifier: 4.17.19
         version: 4.17.19
       p-throttle:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.0
+        version: 8.1.0
       tar:
         specifier: 7.5.8
         version: 7.5.8
@@ -376,8 +376,8 @@ packages:
     resolution: {integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==}
     deprecated: This package is no longer supported.
 
-  p-throttle@8.0.0:
-    resolution: {integrity: sha512-kvpi14SZClZqNTLevyhCNQano1LH4clozDZoOdxnxyvEl17kjEKxkgD6to7mQMcWE4fMKAwbH0rLqm6Gjj7b2Q==}
+  p-throttle@8.1.0:
+    resolution: {integrity: sha512-c1wmXavsHZIC4g1OLhOsafK6jZSAeMo0Ap3yivj59PUcCkpacy5YgWdgIp/dB4vp1JZrfBSsPCR0YuADB+ENLQ==}
     engines: {node: '>=20'}
 
   parse-filepath@1.0.2:
@@ -832,7 +832,7 @@ snapshots:
       os-homedir: 1.0.2
       os-tmpdir: 1.0.2
 
-  p-throttle@8.0.0: {}
+  p-throttle@8.1.0: {}
 
   parse-filepath@1.0.2:
     dependencies:
