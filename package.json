@@ -16,7 +16,7 @@
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
     "@types/grunt": "^0.4.32",
-    "@types/lodash": "4.17.19",
+    "@types/lodash": "4.17.24",
     "typescript": "5.9.3"
   },
   "dependencies": {

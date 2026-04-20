@@ -28,8 +28,8 @@ importers:
         specifier: ^0.4.32
         version: 0.4.32
       '@types/lodash':
-        specifier: 4.17.19
-        version: 4.17.19
+        specifier: 4.17.24
+        version: 4.17.24
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -43,8 +43,8 @@ packages:
   '@types/grunt@0.4.32':
     resolution: {integrity: sha512-PJy6K4u35RMhBD/rc9xoUFip5bnZNZZqTZoNYsqsadFAsPzs6C24xYe/0QYX/NfuCKPiP6/vSi3R5skIgRp3hQ==}
 
-  '@types/lodash@4.17.19':
-    resolution: {integrity: sha512-NYqRyg/hIQrYPT9lbOeYc3kIRabJDn/k4qQHIXUpx88CBDww2fD15Sg5kbXlW86zm2XEW4g0QxkTI3/Kfkc7xQ==}
+  '@types/lodash@4.17.24':
+    resolution: {integrity: sha512-gIW7lQLZbue7lRSWEFql49QJJWThrTFFeIMJdp3eH4tKoxm1OvEPg02rm4wCCSHS0cL3/Fizimb35b7k8atwsQ==}
 
   '@types/node@25.6.0':
     resolution: {integrity: sha512-+qIYRKdNYJwY3vRCZMdJbPLJAtGjQBudzZzdzwQYkEPQd+PJGixUL5QfvCLDaULoLv+RhT3LDkwEfKaAkgSmNQ==}
@@ -498,7 +498,7 @@ snapshots:
     dependencies:
       '@types/node': 25.6.0
 
-  '@types/lodash@4.17.19': {}
+  '@types/lodash@4.17.24': {}
 
   '@types/node@25.6.0':
     dependencies:
